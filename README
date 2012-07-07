@@ -173,11 +173,24 @@ cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git
 --File->Export: BrightScript Deployment -> Next -> Install on Roku Box <select the IP as it'll see it> Select the new file you want to save it as and click Finish
 --THATS IT... it saves the file and loads the box... NEAT HUH!!!
 --Except for the network delays of CFU.net ... works great...
+<<<<<<<<<<<<<<<<<
+>>>>>STEP 3 - Create an app to stream channels off Pauls stuff
+<<<<<<<<<<<<<<<<<
+--I can't play till I'm done with some other work...
+--BUT I do need to know how the stream connection to Doc's stuff should be setup so we can use a Roku as I would like to make sure we can support
+--Roku, WDLiveTV, AppleTV, GoogleTV, and the 2 HDMI dev systems I've got and have coming... including Edgars stuff... 'People' will be out in Aug I'll need to show stuff to..
 
 --<<<<<<<<<<<<<<<<<<<<
 -->>>>>>> IM HERE NOW <<<<    ^^^-HISTORY-Above --> PLAN-Below-vvv  
 -->>>>>>>>>>>>>>>>>>>>
 
+--Lets commit this
+--SAVE THIS README
+--SAVE this and push to cat9.com
+catmac:catdevroku cat$ git add .
+catmac:catdevroku cat$ git commit -m "blahblahtemplatestuff"
+catmac:catdevroku cat$ git push private master
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git pull
 <<<<<<<<<<<<<<<<<
 >>>>>STEP 1, 2, 3 - TEST
 <<<<<<<<<<<<<<<<<
@@ -203,10 +216,7 @@ SUCCESS>> WE ARE GOOD
 catmac:catdevroku cat$ git add .
 catmac:catdevroku cat$ git commit -m "blahblahtemplatestuff"
 catmac:catdevroku cat$ git push private master
-cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git fetch
-cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git reset --hard HEAD
-cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git merge origin/master
-cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git checkout remotes/origin/<whatever branch>
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git pull
 OR
 cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git fetch
 cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git reset --hard HEAD
