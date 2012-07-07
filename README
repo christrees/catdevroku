@@ -1,0 +1,254 @@
+========== BEGIN HEADER ============================
+Intent:  Roku simple test for streaming video.
+Goal: Streaming Video Test dev git repo for Dr. Paul Gray, Jim O'Regan and Chris Trees to play with.
+DateStarted: 2012.06.11 <Decided to buy my second Roku, first one quit bought 03/28/2012>
+DateCreated: 2012.07.07 <This was started when I created the repo to share with Dr. Gray>
+Resources:
+WEB: http://cat.roku.smarttv.kroftup.cat9.com/2012/07/07/catdevroku
+LOCAL: cat@catmac:/Users/cat/Sites/catdevroku
+LOCALWEB: http://catmac.local/~cat/catdevroku/READMECAT.php
+GITREPO: cat@cat9.com:/home/cat/repo/catdevroku.git
+GITCLONE:  <user>@<workserver>:<localpath># git clone ssh://cat@cat9.com:2222/~/repo/catdevroku.git
+GITREMOTE: <user>@<workserver>:<localpath># git remote add origin ssh://cat@cat9.com:2222/~/repo/catdevroku.git
+Servers:
+https://gator1209.hostgator.com:2083/login/ - but only chris 
+http://cat.roku.smarttv.kroftup.cat9.com/2012/07/07/catdevroku/README
+Documents:
+DOCINDEX: NONE yet... intend to use lls
+WEBEDIR: http://catmac.local/~cat/catdevroku/READMECAT.php
+TESTING DOCS: NONE
+======================================================================================
+<<<<<<<<<<<<<<<<<
+>>>>>STEP 1 - Backtrack the history
+<<<<<<<<<<<<<<<<<
+--I basically kind of jumped in to the Roku dev because I've wanted to play and I found the high-end xs on sale though Roku
+--The first Roku I got back in 20120328 stopped working before I had a chance to setup a dev app and the gang and I had been
+--talking about getting the streaming OTT stuff going... I had some time so took the plung (Apple TV dev stuff was non-existant
+--and I had played with WDTV already)... Anyway... so the history goes back to my notes.
+--HR1 - 20120611 - CATPEN0120120207p64 Ordered Roku XS - christrees@yahoo.com - <something # something computer> cat/documents/CAT_9820_RokuPurchaseComfirmation
+--HR2 - 20120614 - Dr. Paul Gray shows me streaming video setup at office
+--HR3 - 20120615 - Setup and play with Roku dev env
+--HR4 - 20120617 - Publish Uncle Neil Video and played on Roku->cat9 channel
+--HR5 - 20120707 - Dr. Paul Gray and I meet and I put this document together so we can setup co-dev for OTT stuff we want to do. CATPEN0120120207p75 CATTRADE0120120213p51
+--NOW... Detail links of reference I'll be pulling out of my web history.
+--Reference Links:
+--THE DEAL - http://www.roku.com/about/roku_coupons?utm_source=email&utm_medium=email&utm_campaign=email
+--My Roku History Link sign-in
+Roku | Sign in
+https://owner.roku.com/Login/?ReturnUrl=%2fDeveloper%2fDevHome
+Monday, June 11, 2012
+--Developer Links https://owner.roku.com/Developer
+--Setting up Roku Dev on Eclipse http://rokudev.roku.com/rokudev/eclipsePluginGuide.pdf
+--MHL Roku <what edgar wants I think> http://www.macworld.com/article/1164620/roku_announces_streaming_stick_for_mhl_enabled_hdtvs.html
+--Basic app http://sdkdocs.roku.com/display/RokuSDKv43/Eclipse+Plugin+Guide
+--That's about it... so next I'll setup the git and take a snapshot at of the existing stuff
+--After that I'll walk through the dev thing I did and also how the Roku does the sideload stuff..
+--I'm also going to set this up under lls so the cmake and doxygen start working...
+<<<<<<<<<<<<<<<<<
+>>>>>STEP 2 - Setup LOCAL git REPO
+<<<<<<<<<<<<<<<<<
+--Well... I started these notes when I am about to verify my Roku app and document that process.
+--I am using cataprojecttemplate as the base template and cleaning things up as I go
+--We want cat9 -> conCATenation 3x3 triangles
+--3 places: local working - cat9.com - graycloud gitlab when possible
+--3 people: me local - me cat9.com - paul catdevroku <yea I'm cheating but it's a template>
+--HomePageURL: http://cattemplates.cat9.com/cataprojecttemplate/test.html
+--BUT this template is for private repos also so putting the private repo pattern.
+--Now setup the local working repo and push to cat9.com
+--CAT-Local
+catmac:Sites cat$ pwd
+/Users/cat/Sites
+catmac:Sites cat$ mkdir catdevroku
+catmac:Sites cat$ cp cataprojecttemplate/READMECAT.php catdevroku/
+catmac:Sites cat$ cp cataprojecttemplate/README catdevroku/
+catmac:Sites cat$ cd catdevroku/
+catmac:catdevroku cat$ chmod 666 README
+--Clean up this README
+--GIT pattern
+ git init
+ git add .
+ git commit -m "init this project"
+ git remote add origin git@github.com:christrees/cataprojecttemplate.git
+ git push -u origin master
+--Saving this now and preforming pattern
+
+
+
+--<<<<<<<<<<<<<<<<<<<<
+-->>>>>>> IM HERE NOW <<<<    ^^^-HISTORY-Above --> PLAN-Below-vvv  
+-->>>>>>>>>>>>>>>>>>>>
+
+
+--NOTE: I had to go accept my catmac key on github not normally required.
+--BUT it's up on github
+--https://github.com/christrees/cataprojecttemplate
+<<<<<<<<<<<<<<<<<
+>>>>>STEP 3 - Setup cat9.com git REPO
+<<<<<<<<<<<<<<<<<
+--I forgot to setup the test.html file so I'll do that now...
+--http://catmac.local/~cat/cataprojecttemplate/READMECAT.php
+catmac:cataprojecttemplate cat$ pwd
+/Users/cat/Sites/cataprojecttemplate
+catmac:cataprojecttemplate cat$ ls -alu
+total 48
+drwxr-xr-x   8 cat  staff   272 Mar 21 12:29 .
+drwxr-xr-x+ 22 cat  staff   748 Mar 21 12:07 ..
+drwxr-xr-x  13 cat  staff   442 Mar 21 12:12 .git
+-rw-r--r--   1 cat  staff   509 Mar 21 12:08 .gitignore
+-rwxr-xr-x   1 cat  staff  9455 Mar 21 12:13 README
+-rw-r--r--   1 cat  staff   457 Mar 21 12:08 READMECAT.php
+-rw-r--r--   1 cat  staff   461 Mar 21 12:08 READMEIGNORE.php
+drwxr-xr-x   5 cat  staff   170 Mar 21 10:55 nbproject
+catmac:cataprojecttemplate cat$ vi test.html
+catmac:cataprojecttemplate cat$ 
+--WOOPS.... can't write..
+catmac:cataprojecttemplate cat$ chmod 666 README
+--Now try to save again
+--THAT WORKS...
+--Create repo on hostgator
+[cat@gator1209 ~]$ cd repo/
+[cat@gator1209 ~/repo]$ ls
+catrp.git  wizzform.git
+[cat@gator1209 ~/repo]$ mkdir cataprojecttemplate.git
+[cat@gator1209 ~/repo]$ cd cataprojecttemplate.git/
+[cat@gator1209 ~/repo/cataprojecttemplate.git]$ git --bare init
+Initialized empty Git repository in /home/cat/repo/cataprojecttemplate.git/
+[cat@gator1209 ~/repo/cataprojecttemplate.git]$ 
+--Now SETUP REMOTE  PRIVATE REPO pointer from working location
+catmac:cataprojecttemplate cat$ git remote add private cat@cat9.com:repo/cataprojecttemplate.git
+--SAVE THIS README 
+catmac:cataprojecttemplate cat$ git add .
+catmac:cataprojecttemplate cat$ git commit -m "Pushing private repo"
+catmac:cataprojecttemplate cat$ git push private master
+Counting objects: 6, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 3.96 KiB, done.
+Total 6 (delta 1), reused 0 (delta 0)
+To cat@cat9.com:repo/cataprojecttemplate.git
+ * [new branch]      master -> master
+catmac:cataprojecttemplate cat$ 
+--OK now lets just pull from the repo from cat9.com and put it up to public
+--NOTE we could also pull from github and we should attempt that also.
+--NOTE we also have to setup cattemplates.cat9.com sub
+--THEN we can do the following local clone
+[cat@gator1209 ~/repo/cataprojecttemplate.git]$ cd ~/public_html/cat
+catform/      catfrombuild/ cattemplates/ 
+[cat@gator1209 ~/repo/cataprojecttemplate.git]$ cd ~/public_html/cattemplates/
+[cat@gator1209 ~/public_html/cattemplates]$ git clone /home/cat/repo/cataprojecttemplate.git/
+Initialized empty Git repository in /home/cat/public_html/cattemplates/cataprojecttemplate/.git/
+[cat@gator1209 ~/public_html/cattemplates]$ ls
+cataprojecttemplate  cgi-bin
+[cat@gator1209 ~/public_html/cattemplates]$ 
+--See if it's out there http://cattemplates.cat9.com/cataprojecttemplate/test.html
+--CRAP... no test.html
+--BUT http://cattemplates.cat9.com/cataprojecttemplate/ has the README... so I'm just out of sync...
+...YUP... we've got the path now...
+--SAVE this and push to github
+catmac:cataprojecttemplate cat$ git add .
+catmac:cataprojecttemplate cat$ git commit -m "Setting up test.html and push the master branch to both <origin> github.com and <private> cat9.com repos"
+catmac:cataprojecttemplate cat$ git push origin master
+catmac:cataprojecttemplate cat$ git push private master
+--Nuke and pull from github
+[cat@gator1209 ~/public_html/cattemplates]$ rm -rf cataprojecttemplate/
+[cat@gator1209 ~/public_html/cattemplates]$ git clone git@github.com:christrees/cataprojecttemplate.git
+--See if it's out there http://cattemplates.cat9.com/cataprojecttemplate/test.html
+--YUP... THAT WORKS
+<<<<<<<<<<<<<<<<<
+>>>>>STEP 1, 2, 3 - TEST
+<<<<<<<<<<<<<<<<<
+Probably the best test is to do a 3 point sync and verify the 2 websites.  The way that works in this case is:
+1 - Modify local file <copy 1> http://catmac.local/~cat/cataprojecttemplate/README
+2 - commit in local file <copy 2>
+3 - push commit to remote repo <copy 3>
+4 - Pull from remote repo a to an alternate site < http://cattemplates.cat9.com/cataprojecttemplate/README >
+5 - Verify your mod / change is reflected.
+SUCCESS>> WE ARE GOOD
+<<<<<<<<<<<<<<<<<
+>>>>>STEP 4 - Clone template and RENAME to new project.
+<<<<<<<<<<<<<<<<<
+--NOW... we use this template to create a new project... we will create the project catjscanvas as the example.
+--The Steps are:
+--1 - Create the public site URL
+--2 - Clone template into the working site
+--3 - Create the blank repo <I'll use github as catjscanvas can be a public project it's just me learning canvas and kineticjs>
+--4 - WORK...
+--NOW... go do it
+--Public site URL will be http://catjstuts.cat9.com/catjscanvas
+--github.com repo will be https://github.com/christrees/catjscanvas
+--ON GITHUB
+https://github.com/christrees
+https://github.com/repositories/new
+ProjectName: catjscanvas
+Description: CAT9 javascript canvas tutorial demos
+HomePageURL: http://catjstuts.cat9.com/catjscanvas/index.html
+--ON CATMAC
+catmac:Sites cat$ pwd
+/Users/cat/Sites
+catmac:Sites cat$ git clone git@github.com:christrees/cataprojecttemplate catjscanvas
+Cloning into 'catjscanvas'...
+remote: Counting objects: 13, done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 13 (delta 4), reused 12 (delta 3)
+Receiving objects: 100% (13/13), 6.85 KiB, done.
+Resolving deltas: 100% (4/4), done.
+catmac:catjscanvas cat$ git remote rm origin
+catmac:catjscanvas cat$ git remote rm private
+error: Could not remove config section 'remote.private'
+--NOTE: github does not have the private... that's in the working git dir
+catmac:catjscanvas cat$ git remote add origin git@github.com:christrees/catjscanvas.git
+--NOW edit the README
+--
+
+catmac:cataprojecttemplate cat$ git add .
+catmac:cataprojecttemplate cat$ git commit -m "Release 2 PUSH to both <origin> github.com and <private> cat9.com repos"
+catmac:cataprojecttemplate cat$ git push origin master
+catmac:cataprojecttemplate cat$ git push private master
+
+======= END =============
+------- copy buffer --------------
+?????????????????????????????????
+<<<<<<<<<<<<<<<<<
+>>>>>STEP x - <step subject>
+<<<<<<<<<<<<<<<<<
+--WHAT the heck to do next... how about blahblah
+--Lets commit this
+--SAVE THIS README
+--SAVE this and push to github
+catmac:cataprojecttemplate cat$ git add .
+catmac:cataprojecttemplate cat$ git commit -m "blahblahtemplatestuff"
+catmac:cataprojecttemplate cat$ git push origin master
+catmac:cataprojecttemplate cat$ git push private master
+[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git fetch
+[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git reset --hard HEAD
+[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git merge origin/master
+[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git checkout remotes/origin/<whatever branch>
+OR
+[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git fetch
+[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git reset --hard HEAD
+[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git merge private/master
+[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git checkout remotes/private/<whatever branch>
+<<<<<<<<<<<<<<<<<
+>>>>>STEP x - TEST
+<<<<<<<<<<<<<<<<<
+Browse - http://catmac.local/~cat/cataprojecttemplate/demo5.html
+Browse - http://cattemplates.cat9.com/cataprojecttemplate/demo5.html
+SUCCESS>>
+?FAILURE>>
+??WHAT?>>
+???????????????????????????????????????
+>>>>>UNUSED / NEXT BUG ID BIN<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
++++++BUG:1 STATUS-> CLOSED
++++++BUG:2 STATUS-> CLOSED
++++++BUG:3 STATUS-> OPEN
++++++BUG:4 STATUS-> OPEN
++++++BUG:5 STATUS-> CLOSED
++++++BUG:6 STATUS-> CLOSED
++++++BUG:7 STATUS-> CLOSED
++++++BUG:8 STATUS-> OPEN
+>>>>>BUG:8 BEGIN
+<<<<<BUG:8 END
++++++BUG:9 STATUS-> OPEN
+>>>>>BUG:9 BEGIN
+<<<<<BUG:9 END

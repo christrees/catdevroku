@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="BrightScriptDeploymentWizard">
+		<item value="false" key="BrightScriptDeploymentWizardPage1.package"/>
+		<item value="true" key="BrightScriptDeploymentWizardPage1.sideload"/>
+		<item value="false" key="BrightScriptDeploymentWizardPage1.STORE_COMPRESS_CONTENTS_ID"/>
+		<item value="false" key="BrightScriptDeploymentWizardPage1.STORE_CREATE_STRUCTURE_ID"/>
+		<item value="10.0.1.13" key="BrightScriptDeploymentWizardPage1.ipaddy"/>
+		<item value="KGezxDDzHRtqobIcSw1Tcw==" key="BrightScriptDeploymentWizardPage1.keypass"/>
+		<list key="BrightScriptDeploymentWizardPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/cat/work/Roku/CATTestRokuSimple/out/CATTestRokuSimple.zip"/>
+			<item value="/Users/cat/Downloads/RokuSDK_v41/examples/source/CATTest.zip"/>
+		</list>
+	</section>
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="28" key="DIALOG_Y_ORIGIN"/>
+		<item value="288" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item value="702" key="DIALOG_WIDTH"/>
+		<item value="-183" key="DIALOG_Y_ORIGIN"/>
+		<item value="652" key="DIALOG_HEIGHT"/>
+		<item value="-80" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="ImportExportAction">
+		<item value="com.roku.brightscript.plugin.wizards.deployment.BrightScriptDeploymentWizard" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="com.roku.brightscript.plugin.category"/>
+		</list>
+	</section>
+</section>

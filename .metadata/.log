@@ -1,0 +1,196 @@
+!SESSION 2012-06-16 16:41:18.802 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_31
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/cat/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/cat/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-06-16 16:41:58.905
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2012-06-16 16:49:09.664
+!MESSAGE Invalid preference page path: JSP Syntax
+
+!ENTRY org.eclipse.ui 4 4 2012-06-16 16:49:09.664
+!MESSAGE Invalid preference page path: HTML Syntax
+
+!ENTRY org.eclipse.ui 4 4 2012-06-16 16:49:09.665
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2012-06-17 11:55:56.714 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_31
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/cat/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/cat/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-06-17 11:56:11.507
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.dltk.core 4 2 2012-06-17 11:58:10.324
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.dltk.core".
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: -7072
+	at org.eclipse.jface.text.rules.BufferedRuleBasedScanner.read(BufferedRuleBasedScanner.java:119)
+	at com.roku.brightscript.ide.eclipse.core.editors.BrightScriptRegExpSingleLinePatternRule.evaluate(BrightScriptRegExpSingleLinePatternRule.java:133)
+	at com.roku.brightscript.ide.eclipse.core.editors.BrightScriptRegExpSingleLinePatternRule.evaluate(BrightScriptRegExpSingleLinePatternRule.java:96)
+	at org.eclipse.jface.text.rules.RuleBasedScanner.nextToken(RuleBasedScanner.java:174)
+	at org.eclipse.jface.text.rules.RuleBasedPartitionScanner.nextToken(RuleBasedPartitionScanner.java:79)
+	at org.eclipse.jface.text.rules.FastPartitioner.initialize(FastPartitioner.java:176)
+	at org.eclipse.jface.text.rules.FastPartitioner.checkInitialization(FastPartitioner.java:151)
+	at org.eclipse.jface.text.rules.FastPartitioner.connect(FastPartitioner.java:143)
+	at org.eclipse.jface.text.rules.FastPartitioner.connect(FastPartitioner.java:125)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.installDocumentStuff(AbstractASTFoldingStructureProvider.java:1408)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.computeCommentsRanges(AbstractASTFoldingStructureProvider.java:1464)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.computeCommentsRanges(AbstractASTFoldingStructureProvider.java:1456)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.computeFoldingStructure(AbstractASTFoldingStructureProvider.java:800)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.computeFoldingStructure(AbstractASTFoldingStructureProvider.java:786)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.update(AbstractASTFoldingStructureProvider.java:721)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.access$1(AbstractASTFoldingStructureProvider.java:715)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider$ElementChangedListener.elementChanged(AbstractASTFoldingStructureProvider.java:523)
+	at org.eclipse.dltk.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1700)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.dltk.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1686)
+	at org.eclipse.dltk.internal.core.DeltaProcessor.fireReconcileDelta(DeltaProcessor.java:1550)
+	at org.eclipse.dltk.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1506)
+	at org.eclipse.dltk.internal.core.ModelOperation.run(ModelOperation.java:743)
+	at org.eclipse.dltk.internal.core.ModelOperation.runOperation(ModelOperation.java:764)
+	at org.eclipse.dltk.internal.core.SourceModule.reconcile(SourceModule.java:309)
+	at org.eclipse.dltk.internal.ui.text.ScriptReconcilingStrategy.reconcile(ScriptReconcilingStrategy.java:164)
+	at org.eclipse.dltk.internal.ui.text.ScriptReconcilingStrategy.access$0(ScriptReconcilingStrategy.java:153)
+	at org.eclipse.dltk.internal.ui.text.ScriptReconcilingStrategy$1.run(ScriptReconcilingStrategy.java:125)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.dltk.internal.ui.text.ScriptReconcilingStrategy.reconcile(ScriptReconcilingStrategy.java:120)
+	at org.eclipse.dltk.internal.ui.text.ScriptReconcilingStrategy.reconcile(ScriptReconcilingStrategy.java:192)
+	at org.eclipse.dltk.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:97)
+	at org.eclipse.dltk.internal.ui.text.ScriptCompositeReconcilingStrategy.reconcile(ScriptCompositeReconcilingStrategy.java:74)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.dltk.core 4 4 2012-06-17 11:58:10.356
+!MESSAGE Exception occurred in listener of script element change notification
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: -7072
+	at org.eclipse.jface.text.rules.BufferedRuleBasedScanner.read(BufferedRuleBasedScanner.java:119)
+	at com.roku.brightscript.ide.eclipse.core.editors.BrightScriptRegExpSingleLinePatternRule.evaluate(BrightScriptRegExpSingleLinePatternRule.java:133)
+	at com.roku.brightscript.ide.eclipse.core.editors.BrightScriptRegExpSingleLinePatternRule.evaluate(BrightScriptRegExpSingleLinePatternRule.java:96)
+	at org.eclipse.jface.text.rules.RuleBasedScanner.nextToken(RuleBasedScanner.java:174)
+	at org.eclipse.jface.text.rules.RuleBasedPartitionScanner.nextToken(RuleBasedPartitionScanner.java:79)
+	at org.eclipse.jface.text.rules.FastPartitioner.initialize(FastPartitioner.java:176)
+	at org.eclipse.jface.text.rules.FastPartitioner.checkInitialization(FastPartitioner.java:151)
+	at org.eclipse.jface.text.rules.FastPartitioner.connect(FastPartitioner.java:143)
+	at org.eclipse.jface.text.rules.FastPartitioner.connect(FastPartitioner.java:125)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.installDocumentStuff(AbstractASTFoldingStructureProvider.java:1408)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.computeCommentsRanges(AbstractASTFoldingStructureProvider.java:1464)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.computeCommentsRanges(AbstractASTFoldingStructureProvider.java:1456)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.computeFoldingStructure(AbstractASTFoldingStructureProvider.java:800)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.computeFoldingStructure(AbstractASTFoldingStructureProvider.java:786)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.update(AbstractASTFoldingStructureProvider.java:721)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider.access$1(AbstractASTFoldingStructureProvider.java:715)
+	at org.eclipse.dltk.ui.text.folding.AbstractASTFoldingStructureProvider$ElementChangedListener.elementChanged(AbstractASTFoldingStructureProvider.java:523)
+	at org.eclipse.dltk.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1700)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.dltk.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1686)
+	at org.eclipse.dltk.internal.core.DeltaProcessor.fireReconcileDelta(DeltaProcessor.java:1550)
+	at org.eclipse.dltk.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1506)
+	at org.eclipse.dltk.internal.core.ModelOperation.run(ModelOperation.java:743)
+	at org.eclipse.dltk.internal.core.ModelOperation.runOperation(ModelOperation.java:764)
+	at org.eclipse.dltk.internal.core.SourceModule.reconcile(SourceModule.java:309)
+	at org.eclipse.dltk.internal.ui.text.ScriptReconcilingStrategy.reconcile(ScriptReconcilingStrategy.java:164)
+	at org.eclipse.dltk.internal.ui.text.ScriptReconcilingStrategy.access$0(ScriptReconcilingStrategy.java:153)
+	at org.eclipse.dltk.internal.ui.text.ScriptReconcilingStrategy$1.run(ScriptReconcilingStrategy.java:125)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.dltk.internal.ui.text.ScriptReconcilingStrategy.reconcile(ScriptReconcilingStrategy.java:120)
+	at org.eclipse.dltk.internal.ui.text.ScriptReconcilingStrategy.reconcile(ScriptReconcilingStrategy.java:192)
+	at org.eclipse.dltk.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:97)
+	at org.eclipse.dltk.internal.ui.text.ScriptCompositeReconcilingStrategy.reconcile(ScriptCompositeReconcilingStrategy.java:74)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.ui 4 4 2012-06-17 12:20:03.032
+!MESSAGE Invalid preference page path: JSP Syntax
+
+!ENTRY org.eclipse.ui 4 4 2012-06-17 12:20:03.033
+!MESSAGE Invalid preference page path: HTML Syntax
+
+!ENTRY org.eclipse.ui 4 4 2012-06-17 12:20:03.033
+!MESSAGE Invalid preference page path: XML Syntax
+
+!ENTRY org.eclipse.ui 4 4 2012-06-17 13:32:59.614
+!MESSAGE Invalid preference page path: Web Page Editor
+!SESSION 2012-06-17 17:49:29.531 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_31
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/cat/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/cat/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-06-17 17:50:16.416
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2012-06-17 17:53:51.537
+!MESSAGE Invalid preference page path: JSP Syntax
+
+!ENTRY org.eclipse.ui 4 4 2012-06-17 17:53:51.545
+!MESSAGE Invalid preference page path: HTML Syntax
+
+!ENTRY org.eclipse.ui 4 4 2012-06-17 17:53:51.546
+!MESSAGE Invalid preference page path: XML Syntax
+
+!ENTRY com.roku.brightscript.ide.eclipse.core 4 0 2012-06-18 21:52:33.341
+!MESSAGE Exception while handling log message
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.internalGet(ScopedPreferenceStore.java:474)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getInt(ScopedPreferenceStore.java:501)
+	at com.roku.brightscript.ide.eclipse.core.BrightScriptPlugin$ActivatorLogListener.logText(BrightScriptPlugin.java:217)
+	at com.roku.rsp.discovery.SSDPListener.logText(SSDPListener.java:288)
+	at com.roku.rsp.discovery.SSDPListener$MulticastListener.run(SSDPListener.java:587)
+	at java.lang.Thread.run(Thread.java:680)
+
+!ENTRY com.roku.brightscript.ide.eclipse.core 4 0 2012-06-18 21:52:33.406
+!MESSAGE Exception while handling log message
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.internalGet(ScopedPreferenceStore.java:474)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getInt(ScopedPreferenceStore.java:501)
+	at com.roku.brightscript.ide.eclipse.core.BrightScriptPlugin$ActivatorLogListener.logText(BrightScriptPlugin.java:217)
+	at com.roku.rsp.discovery.SSDPListener.logText(SSDPListener.java:288)
+	at com.roku.rsp.discovery.SSDPListener.ssdpDatagramHandler(SSDPListener.java:854)
+	at com.roku.rsp.discovery.SSDPListener$MulticastListener.run(SSDPListener.java:593)
+	at java.lang.Thread.run(Thread.java:680)
+
+!ENTRY com.roku.brightscript.ide.eclipse.core 4 0 2012-06-18 21:52:33.408
+!MESSAGE Exception while handling log message
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.internalGet(ScopedPreferenceStore.java:474)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getInt(ScopedPreferenceStore.java:501)
+	at com.roku.brightscript.ide.eclipse.core.BrightScriptPlugin$ActivatorLogListener.logText(BrightScriptPlugin.java:217)
+	at com.roku.rsp.discovery.SSDPListener.logText(SSDPListener.java:288)
+	at com.roku.rsp.discovery.SSDPListener$MulticastListener.run(SSDPListener.java:582)
+	at java.lang.Thread.run(Thread.java:680)
+
+!ENTRY com.roku.brightscript.ide.eclipse.core 4 0 2012-06-18 21:52:33.452
+!MESSAGE Exception while handling log message
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.internalGet(ScopedPreferenceStore.java:474)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getInt(ScopedPreferenceStore.java:501)
+	at com.roku.brightscript.ide.eclipse.core.BrightScriptPlugin$ActivatorLogListener.logText(BrightScriptPlugin.java:217)
+	at com.roku.rsp.discovery.SSDPListener.logText(SSDPListener.java:288)
+	at com.roku.rsp.discovery.SSDPListener$MulticastListener.run(SSDPListener.java:591)
+	at java.lang.Thread.run(Thread.java:680)
+
+!ENTRY com.roku.brightscript.ide.eclipse.core 4 0 2012-06-18 21:52:33.477
+!MESSAGE Exception while handling log message
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.internalGet(ScopedPreferenceStore.java:474)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getInt(ScopedPreferenceStore.java:501)
+	at com.roku.brightscript.ide.eclipse.core.BrightScriptPlugin$ActivatorLogListener.logText(BrightScriptPlugin.java:217)
+	at com.roku.rsp.discovery.SSDPListener.logText(SSDPListener.java:288)
+	at com.roku.rsp.discovery.SSDPListener$MulticastListener.run(SSDPListener.java:582)
+	at java.lang.Thread.run(Thread.java:680)
