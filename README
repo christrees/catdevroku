@@ -71,140 +71,113 @@ catmac:catdevroku cat$ chmod 666 README
  git remote add origin git@github.com:christrees/cataprojecttemplate.git
  git push -u origin master
 --Saving this now and preforming pattern
-
-
+--So I did the above
+catmac:Sites cat$ cd catdevroku/
+catmac:catdevroku cat$ chmod 666 README
+catmac:catdevroku cat$ git init
+Initialized empty Git repository in /Users/cat/Sites/catdevroku/.git/
+catmac:catdevroku cat$ git add .
+--Then setup cat9.com repo
+cat@cat9.com [~/repo]# mkdir catdevroku.git
+cat@cat9.com [~/repo]# cd catdevroku.git/
+cat@cat9.com [~/repo/catdevroku.git]# git --bare init
+Initialized empty Git repository in /home/cat/repo/catdevroku.git/
+cat@cat9.com [~/repo/catdevroku.git]# 
+--Then did the commit and push
+catmac:catdevroku cat$ git remote add private cat@cat9.com:repo/catdevroku.git
+catmac:catdevroku cat$ git commit -m "Initial catdevroku commit and private push"
+--took out all the commit messages
+catmac:catdevroku cat$ git push private master
+Counting objects: 134, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (113/113), done.
+Writing objects: 100% (134/134), 691.66 KiB, done.
+Total 134 (delta 15), reused 0 (delta 0)
+To cat@cat9.com:repo/catdevroku.git
+ * [new branch]      master -> master
+catmac:catdevroku cat$ 
+--I call the cat@cat9.com  "private" and not "origin"... "origin" is the normal git term to use.
+--Now lets pull the repo into the public space
+--We want to setup the domain and site
+--http://cat.roku.smarttv.kroft.cat9.com/2012/07/07/catdevroku
+--SO it's off to the DNS entry to create cat.roku.smarttv.kroftup.cat9.com
+--https://gator1209.hostgator.com:2083/
+cat@cat9.com [~/repo/catdevroku.git]# cd ~/public_html/cat.roku.smarttv.kroftup/cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup]# mkdir 2012
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup]# cd 2012
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012]# mkdir 07
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012]# cd 07
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07]# mkdir 07
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07]# cd 07/
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07]# git clone /home/cat/repo/catdevroku.git/
+Cloning into 'catdevroku'...
+done.
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07]# ls
+./  ../  catdevroku/
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07]# 
+--Now test....
+--http://cat.roku.smarttv.kroftup.cat9.com/2012/07/07/catdevroku/README
+--THAT WORKS... now put some auth on for now...
+--cat - time2invest  paul - time2invest  jim - time2invest under main domain
+--Send email to paul with the link.
+--OK... now I'm going to save and commit this but not push
+--The next thing is to go verify I can still build and change the roku app and document that.
+<<<<<<<<<<<<<<<<<
+>>>>>STEP 2 - Verify dev of cat9 roku channel playing uncle neil
+<<<<<<<<<<<<<<<<<
+--OK... I'm going to go through messing with the RoKu source changing something and testing.
+--First... I pulled in the Eclipse dev env... see here:
+--http://rokudev.roku.com/rokudev/eclipsePluginGuide.pdf
+--Next fire up eclipse as I moved some crap around...
+--The eclipse workspace is abit tricky and I'm not sure how it works yet or how it pollutes but...
+--File->New->Other : BrightScript
+ProjectName: CATTestRokuSimple
+Dir: /Users/cat/Sites/catdevroku/CATTestRokuSimple
+--OK... that created the project
+--Open sources/appMain.brs
+--You see some of the basic stuff... as on http://rokudev.roku.com/rokudev/eclipsePluginGuide.pdf page 8
+--http://rokudev.roku.com/rokudev/eclipsePluginGuide.pdf page 9 tells you how to export to 
+--File->Export
+--But I didn't recompile yet... just going to add the old zip
+--Go to your Roku box mine is at http://10.0.1.13/
+--Developer mode http://sdkdocs.roku.com/display/RokuSDKv43/Developer+Guide#DeveloperGuide-71EnablingDevelopmentModeonyourbox
+--http://sdkdocs.roku.com/display/RokuSDKv43/Developer+Guide
+--Click Installer
+--Click Choose File
+--Browse to the zip
+catmac:out cat$ pwd
+/Users/cat/Sites/catdevroku/CATTestRokuSimple/out
+catmac:out cat$ ls
+CATTestRokuSimple.zip
+catmac:out cat$ 
+--Click Install
+--You should see my Roku channel
+--Lets commit this
+--SAVE THIS README
+--SAVE this and push to cat9.com
+catmac:catdevroku cat$ git add .
+catmac:catdevroku cat$ git commit -m "Just setting up and walking through Roku Dev ENV"
+catmac:catdevroku cat$ git push private master
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git fetch
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git reset --hard HEAD
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git merge private/master
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git checkout remotes/private/<whatever branch>
 
 --<<<<<<<<<<<<<<<<<<<<
 -->>>>>>> IM HERE NOW <<<<    ^^^-HISTORY-Above --> PLAN-Below-vvv  
 -->>>>>>>>>>>>>>>>>>>>
 
-
---NOTE: I had to go accept my catmac key on github not normally required.
---BUT it's up on github
---https://github.com/christrees/cataprojecttemplate
-<<<<<<<<<<<<<<<<<
->>>>>STEP 3 - Setup cat9.com git REPO
-<<<<<<<<<<<<<<<<<
---I forgot to setup the test.html file so I'll do that now...
---http://catmac.local/~cat/cataprojecttemplate/READMECAT.php
-catmac:cataprojecttemplate cat$ pwd
-/Users/cat/Sites/cataprojecttemplate
-catmac:cataprojecttemplate cat$ ls -alu
-total 48
-drwxr-xr-x   8 cat  staff   272 Mar 21 12:29 .
-drwxr-xr-x+ 22 cat  staff   748 Mar 21 12:07 ..
-drwxr-xr-x  13 cat  staff   442 Mar 21 12:12 .git
--rw-r--r--   1 cat  staff   509 Mar 21 12:08 .gitignore
--rwxr-xr-x   1 cat  staff  9455 Mar 21 12:13 README
--rw-r--r--   1 cat  staff   457 Mar 21 12:08 READMECAT.php
--rw-r--r--   1 cat  staff   461 Mar 21 12:08 READMEIGNORE.php
-drwxr-xr-x   5 cat  staff   170 Mar 21 10:55 nbproject
-catmac:cataprojecttemplate cat$ vi test.html
-catmac:cataprojecttemplate cat$ 
---WOOPS.... can't write..
-catmac:cataprojecttemplate cat$ chmod 666 README
---Now try to save again
---THAT WORKS...
---Create repo on hostgator
-[cat@gator1209 ~]$ cd repo/
-[cat@gator1209 ~/repo]$ ls
-catrp.git  wizzform.git
-[cat@gator1209 ~/repo]$ mkdir cataprojecttemplate.git
-[cat@gator1209 ~/repo]$ cd cataprojecttemplate.git/
-[cat@gator1209 ~/repo/cataprojecttemplate.git]$ git --bare init
-Initialized empty Git repository in /home/cat/repo/cataprojecttemplate.git/
-[cat@gator1209 ~/repo/cataprojecttemplate.git]$ 
---Now SETUP REMOTE  PRIVATE REPO pointer from working location
-catmac:cataprojecttemplate cat$ git remote add private cat@cat9.com:repo/cataprojecttemplate.git
---SAVE THIS README 
-catmac:cataprojecttemplate cat$ git add .
-catmac:cataprojecttemplate cat$ git commit -m "Pushing private repo"
-catmac:cataprojecttemplate cat$ git push private master
-Counting objects: 6, done.
-Delta compression using up to 2 threads.
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (6/6), 3.96 KiB, done.
-Total 6 (delta 1), reused 0 (delta 0)
-To cat@cat9.com:repo/cataprojecttemplate.git
- * [new branch]      master -> master
-catmac:cataprojecttemplate cat$ 
---OK now lets just pull from the repo from cat9.com and put it up to public
---NOTE we could also pull from github and we should attempt that also.
---NOTE we also have to setup cattemplates.cat9.com sub
---THEN we can do the following local clone
-[cat@gator1209 ~/repo/cataprojecttemplate.git]$ cd ~/public_html/cat
-catform/      catfrombuild/ cattemplates/ 
-[cat@gator1209 ~/repo/cataprojecttemplate.git]$ cd ~/public_html/cattemplates/
-[cat@gator1209 ~/public_html/cattemplates]$ git clone /home/cat/repo/cataprojecttemplate.git/
-Initialized empty Git repository in /home/cat/public_html/cattemplates/cataprojecttemplate/.git/
-[cat@gator1209 ~/public_html/cattemplates]$ ls
-cataprojecttemplate  cgi-bin
-[cat@gator1209 ~/public_html/cattemplates]$ 
---See if it's out there http://cattemplates.cat9.com/cataprojecttemplate/test.html
---CRAP... no test.html
---BUT http://cattemplates.cat9.com/cataprojecttemplate/ has the README... so I'm just out of sync...
-...YUP... we've got the path now...
---SAVE this and push to github
-catmac:cataprojecttemplate cat$ git add .
-catmac:cataprojecttemplate cat$ git commit -m "Setting up test.html and push the master branch to both <origin> github.com and <private> cat9.com repos"
-catmac:cataprojecttemplate cat$ git push origin master
-catmac:cataprojecttemplate cat$ git push private master
---Nuke and pull from github
-[cat@gator1209 ~/public_html/cattemplates]$ rm -rf cataprojecttemplate/
-[cat@gator1209 ~/public_html/cattemplates]$ git clone git@github.com:christrees/cataprojecttemplate.git
---See if it's out there http://cattemplates.cat9.com/cataprojecttemplate/test.html
---YUP... THAT WORKS
 <<<<<<<<<<<<<<<<<
 >>>>>STEP 1, 2, 3 - TEST
 <<<<<<<<<<<<<<<<<
-Probably the best test is to do a 3 point sync and verify the 2 websites.  The way that works in this case is:
-1 - Modify local file <copy 1> http://catmac.local/~cat/cataprojecttemplate/README
+Probably the best test is to do a 3 point sync and verify the 2 websites (local then cat9).  The way that works in this case is:
+1 - Modify local file <copy 1> http://catmac.local/~cat/catdevroku/READMECAT.php
 2 - commit in local file <copy 2>
 3 - push commit to remote repo <copy 3>
-4 - Pull from remote repo a to an alternate site < http://cattemplates.cat9.com/cataprojecttemplate/README >
+4 - Pull from remote repo a to an alternate site < http://cat.roku.smarttv.kroftup.cat9.com/2012/07/07/catdevroku/README >
 5 - Verify your mod / change is reflected.
+6 - Build Roku app and side load
+7 - See Roku channel update
 SUCCESS>> WE ARE GOOD
-<<<<<<<<<<<<<<<<<
->>>>>STEP 4 - Clone template and RENAME to new project.
-<<<<<<<<<<<<<<<<<
---NOW... we use this template to create a new project... we will create the project catjscanvas as the example.
---The Steps are:
---1 - Create the public site URL
---2 - Clone template into the working site
---3 - Create the blank repo <I'll use github as catjscanvas can be a public project it's just me learning canvas and kineticjs>
---4 - WORK...
---NOW... go do it
---Public site URL will be http://catjstuts.cat9.com/catjscanvas
---github.com repo will be https://github.com/christrees/catjscanvas
---ON GITHUB
-https://github.com/christrees
-https://github.com/repositories/new
-ProjectName: catjscanvas
-Description: CAT9 javascript canvas tutorial demos
-HomePageURL: http://catjstuts.cat9.com/catjscanvas/index.html
---ON CATMAC
-catmac:Sites cat$ pwd
-/Users/cat/Sites
-catmac:Sites cat$ git clone git@github.com:christrees/cataprojecttemplate catjscanvas
-Cloning into 'catjscanvas'...
-remote: Counting objects: 13, done.
-remote: Compressing objects: 100% (10/10), done.
-remote: Total 13 (delta 4), reused 12 (delta 3)
-Receiving objects: 100% (13/13), 6.85 KiB, done.
-Resolving deltas: 100% (4/4), done.
-catmac:catjscanvas cat$ git remote rm origin
-catmac:catjscanvas cat$ git remote rm private
-error: Could not remove config section 'remote.private'
---NOTE: github does not have the private... that's in the working git dir
-catmac:catjscanvas cat$ git remote add origin git@github.com:christrees/catjscanvas.git
---NOW edit the README
---
-
-catmac:cataprojecttemplate cat$ git add .
-catmac:cataprojecttemplate cat$ git commit -m "Release 2 PUSH to both <origin> github.com and <private> cat9.com repos"
-catmac:cataprojecttemplate cat$ git push origin master
-catmac:cataprojecttemplate cat$ git push private master
-
 ======= END =============
 ------- copy buffer --------------
 ?????????????????????????????????
@@ -214,25 +187,24 @@ catmac:cataprojecttemplate cat$ git push private master
 --WHAT the heck to do next... how about blahblah
 --Lets commit this
 --SAVE THIS README
---SAVE this and push to github
-catmac:cataprojecttemplate cat$ git add .
-catmac:cataprojecttemplate cat$ git commit -m "blahblahtemplatestuff"
-catmac:cataprojecttemplate cat$ git push origin master
-catmac:cataprojecttemplate cat$ git push private master
-[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git fetch
-[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git reset --hard HEAD
-[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git merge origin/master
-[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git checkout remotes/origin/<whatever branch>
+--SAVE this and push to cat9.com
+catmac:catdevroku cat$ git add .
+catmac:catdevroku cat$ git commit -m "blahblahtemplatestuff"
+catmac:catdevroku cat$ git push private master
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git fetch
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git reset --hard HEAD
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git merge origin/master
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git checkout remotes/origin/<whatever branch>
 OR
-[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git fetch
-[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git reset --hard HEAD
-[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git merge private/master
-[cat@gator1209 ~/public_html/cattemplate/cataprojecttemplate]$ git checkout remotes/private/<whatever branch>
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git fetch
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git reset --hard HEAD
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git merge private/master
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git checkout remotes/private/<whatever branch>
 <<<<<<<<<<<<<<<<<
 >>>>>STEP x - TEST
 <<<<<<<<<<<<<<<<<
-Browse - http://catmac.local/~cat/cataprojecttemplate/demo5.html
-Browse - http://cattemplates.cat9.com/cataprojecttemplate/demo5.html
+Browse - http://catmac.local/~cat/catdevroku/READMECAT.php
+Browse - http://cat.roku.smarttv.kroftup.cat9.com/2012/07/07/catdevroku/README
 SUCCESS>>
 ?FAILURE>>
 ??WHAT?>>
