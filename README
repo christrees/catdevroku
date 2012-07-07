@@ -161,6 +161,18 @@ cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git
 cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git reset --hard HEAD
 cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git merge private/master
 cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git checkout remotes/private/<whatever branch>
+--WELL.. I messed up the git... 
+cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git pull
+--All is fine when I do git pull the other stuff was when I was using that site as an aux users and just wanting to reset to the repo
+--OK... back to the Roku... we are ALMOST to the point where I left the stuff.
+--So look at line 179 in appMain.brs
+--That's the connection URL to play a file
+--I have not looked at the 'live stream' as offically I don't think RoKu does LIVE stream... it has some sort of buffer thing
+--Anyway... walking through the code...
+--Look at line 16 - 29 in appMain.brs that is basically the menu
+--File->Export: BrightScript Deployment -> Next -> Install on Roku Box <select the IP as it'll see it> Select the new file you want to save it as and click Finish
+--THATS IT... it saves the file and loads the box... NEAT HUH!!!
+--Except for the network delays of CFU.net ... works great...
 
 --<<<<<<<<<<<<<<<<<<<<
 -->>>>>>> IM HERE NOW <<<<    ^^^-HISTORY-Above --> PLAN-Below-vvv  
