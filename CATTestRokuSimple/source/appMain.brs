@@ -20,12 +20,12 @@ Sub Main()
                HDBranded:False
                ShortDescriptionLine1:"CAT Test Short Description"
                ShortDescriptionLine2:""
-               Description:"Chris Trees tries to build his own channel."
+               Description:"Chris Trees tries to build his own channel that Jim can use."
                Rating:"NR"
                StarRating:"80"
                Length:1280
                Categories:["CAT","Test"]
-               Title:"Chris Trees builds stuff ;-)"
+               Title:"Chris Trees builds stuff v1.2.00007 ;-)"
                }
 
     itemVenter = { ContentType:"episode"
@@ -179,7 +179,7 @@ Function displayVideo()
     urls = ["http://amy.klopfenstein.org/2012/05/26/CAT_20120526_AmyWedding_UncleNeil.m4v"]
     qualities = ["HD"]
     StreamFormat = "mp4"
-    title = "Uncle Neil spins Amy."
+    title = "Uncle Neil and the Wedding."
 
     ' Apple's HLS test stream
     'urls = ["http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"]

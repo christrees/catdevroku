@@ -179,6 +179,75 @@ cat@cat9.com [~/public_html/cat.roku.smarttv.kroftup/2012/07/07/catdevroku]# git
 --I can't play till I'm done with some other work...
 --BUT I do need to know how the stream connection to Doc's stuff should be setup so we can use a Roku as I would like to make sure we can support
 --Roku, WDLiveTV, AppleTV, GoogleTV, and the 2 HDMI dev systems I've got and have coming... including Edgars stuff... 'People' will be out in Aug I'll need to show stuff to..
+--Well sent email to Jim and Paul and they could not load the app... so I checked
+--Looks like I need to package to load the channel normally...
+--http://sdkdocs.roku.com/display/RokuSDKv43/Channel+Packaging+And+Publishing
+--Guess I'll do that next... but it's late and I'm tired and this document was for development not just 'play'.. just in case you guys actually READ this
+--NO... this was NOT intended for DISTRIBUTION but how I created this DEVELOPMENT ENV... the Roku SDK did make that easy
+--
+--When you Export it creates a zip file.  That zip file can be loaded onto a local device, I'm not sure how this really is working but I'm guessing something
+--about the local network access to the roku box.  When you want to put it on 'any' box you need to get key pairs made and roku box has what I'm
+--guessing is some sort of salt per device that is they are using the device to create the uploaded key pairs.  That is called packager
+--Go to your roku box... if you have NOT enabled the developer mode do the button combo dance of
+--
+--Home Home Home
+--Up Up
+--Right Left
+--Right Left
+--Right
+--
+--Now go to the device load the zip file
+--http://10.0.1.13 - Installer
+--To acchive file: /Users/cat/Sites/catdevroku/CATTestRokuSimple/out/CATTestRokuSimplev1200007.zip
+--Install on: 10.0.1.13
+--Choose the file you want to upload and Replace or Install
+--http://10.0.1.13 - Packager
+--Enter the App Name and Password and click Package
+--Click on the link it gives to upload the package to your computer.
+--
+--CHANNEL Stuff to make package
+--DEV ID: 427022a9f9da3be9b2e1e2f5ef587544c1c9ce35
+--Password: qEcM0OLT4W7F7Si1OPZ7aw==
+--App Name/Version: CATTV/1.2.00007
+--
+--Now I go back to site
+--https://owner.roku.com/Developer/Apps
+--Add Private Channel
+--Fill the form out
+--FREAKIN need:
+--290x218 jpeg image
+--214x133 jpeg image
+--DARN image creation... darn thing is picky
+--I created some images the right size with sumo online paint program I've used in the past
+--http://www.sumo.fm/#create <I used my google account as they had OAuth with Google>
+--this is creating the Channel Store Channel Menu and associated roku link for the secured signed package
+--Then you can upload the package that is associated with that channel
+--Right now the https://owner.roku.com/add/9RMSM
+--is associated with the https://owner.roku.com/add/cat channel
+--Because it is private... you have to know the link in order to add it via the roku website to your roku device.
+--OK I'm going to commit and push this but leave some of the random below information open
+--EMAIL chain
+--https://mail.google.com/mail/ca/u/0/#inbox/13863780e494e0e0
+--https://mail.google.com/mail/ca/u/0/#sent/13866dfccfb0768a
+
+
+http://blog.defaultroute.com/tag/roku/
+http://blog.defaultroute.com/tag/roku/290
+http://blog.defaultroute.com/2010/12/13/building-a-roku-channel-part-1/
+http://blog.defaultroute.com/2011/01/04/building-a-roku-channel-part-2/
+http://blog.defaultroute.com/2011/01/24/building-a-roku-channel-part-3/
+
+http://sdkdocs.roku.com/display/RokuSDKv43/Channel+Packaging+And+Publishing
+http://sdkdocs.roku.com/display/RokuSDKv43/Design+Guidelines
+
+http://www.herofish.com/2012/01/how-to-create-you-own-roku-videoplayer-channel/
+http://www.herofish.com/2012/01/how-to-create-your-own-roku-channelpart2-icons-and-images/
+
+--create image and buttons
+http://www.sumo.fm/#create <I used my google account as they had OAuth with Google>
+http://cooltext.com/Buttons
+http://svg-edit.googlecode.com/svn/branches/2.5.1/editor/svg-editor.html
+http://code.google.com/p/svg-edit/
 
 --<<<<<<<<<<<<<<<<<<<<
 -->>>>>>> IM HERE NOW <<<<    ^^^-HISTORY-Above --> PLAN-Below-vvv  
